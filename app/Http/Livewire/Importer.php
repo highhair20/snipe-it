@@ -41,6 +41,7 @@ class Importer extends Component
     // Make these variables public - we set the properties in the constructor so we can localize them (versus the old static arrays)
     public $accessories_fields;
     public $assets_fields;
+    public $assets_bulk_fields;
     public $users_fields;
     public $licenses_fields;
     public $locations_fields;
@@ -73,6 +74,9 @@ class Importer extends Component
     {
         switch ($type) {
             case 'asset':
+                $results = $this->assets_fields;
+                break;
+            case 'asset_bulk':
                 $results = $this->assets_fields;
                 break;
             case 'accessory':
