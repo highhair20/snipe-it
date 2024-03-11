@@ -166,6 +166,7 @@ class Importer extends Component
         $this->progress_bar_class = 'progress-bar-warning';
         $this->importTypes = [
             'asset' =>      trans('general.assets'),
+            'asset_bulk' =>      trans('general.assets_bulk'),
             'accessory' =>  trans('general.accessories'),
             'consumable' => trans('general.consumables'),
             'component' =>  trans('general.components'),

@@ -28,6 +28,7 @@ return [
     'audit'				    => 'Audit',
     'audit_report'			=> 'Audit Log',
     'assets'				=> 'Assets',
+    'assets_bulk'				=> 'Assets Bulk',
     'assets_audited'        => 'assets audited',
     'assets_checked_in_count'     => 'assets checked in',
     'assets_checked_out_count'     => 'assets checked out',
