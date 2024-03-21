@@ -19,6 +19,7 @@ return [
     'asset_models'			=> 'Asset Models',
     'asset_model'			=> 'Model',
     'asset'					=> 'Asset',
+    'asset_quantity'		=> 'Quantity',
     'asset_report'          => 'Asset Report',
     'asset_tag'				=> 'Asset Tag',
     'asset_tags'            => 'Asset Tags',

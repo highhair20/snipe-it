@@ -77,7 +77,7 @@ class Importer extends Component
                 $results = $this->assets_fields;
                 break;
             case 'asset_bulk':
-                $results = $this->assets_fields;
+                $results = $this->assets_bulk_fields;
                 break;
             case 'accessory':
                 $results = $this->accessories_fields;
@@ -221,6 +221,27 @@ class Importer extends Component
             'order_number' => trans('general.order_number'),
             'image' => trans('general.importer.image_filename'),
             'asset_eol_date' => trans('admin/hardware/form.eol_date'),
+            /**
+             * Checkout fields:
+             * Assets can be checked out to other assets, people, or locations, but we currently
+             * only support checkout to people and locations in the importer
+             **/
+            'checkout_class' => trans('general.importer.checkout_type'),
+            'first_name' => trans('general.importer.checked_out_to_first_name'),
+            'last_name' => trans('general.importer.checked_out_to_last_name'),
+            'full_name' => trans('general.importer.checked_out_to_fullname'),
+            'email' => trans('general.importer.checked_out_to_email'),
+            'username' => trans('general.importer.checked_out_to_username'),
+            'checkout_location' => trans('general.importer.checkout_location'),
+        ];
+
+        $this->assets_bulk_fields = [
+            'item_name' => trans('general.item_name_var', ['item' => trans('general.asset')]),
+            'asset_tag' => trans('general.asset_tag'),
+            'asset_model' => trans('general.model_name'),
+            'status' => trans('general.status'),
+            'category' => trans('general.category'),
+            'asset_notes' => trans('general.item_notes', ['item' => trans('admin/hardware/general.asset')]),
             /**
              * Checkout fields:
              * Assets can be checked out to other assets, people, or locations, but we currently
