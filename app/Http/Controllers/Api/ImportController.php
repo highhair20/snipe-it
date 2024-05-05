@@ -176,6 +176,7 @@ class ImportController extends Controller
         $redirectTo = 'hardware.index';
         switch ($request->get('import-type')) {
             case 'asset':
+//            case 'asset_bulk':
                 $redirectTo = 'hardware.index';
                 break;
             case 'accessory':

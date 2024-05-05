@@ -13,7 +13,7 @@ class AssetBulkImporter extends AssetImporter
     protected function handle($row)
     {
         // loop through each record and call parent for each 'quantity'
-        $item_quantity = $this->findCsvMatch($row, 'quantity');
+        $item_quantity = $this->findCsvMatch($row, 'asset_quantity');
         if ($item_quantity) {
             $item_quantity = int($item_quantity);
             for ($i = 0; $i < $item_quantity; $i++) {

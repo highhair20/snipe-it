@@ -170,7 +170,7 @@ class Importer extends Component
         $this->progress_bar_class = 'progress-bar-warning';
         $this->importTypes = [
             'asset' =>      trans('general.assets'),
-            'asset_bulk' =>      trans('general.assets_bulk'),
+            'asset_bulk' => trans('general.assets_bulk'),
             'accessory' =>  trans('general.accessories'),
             'consumable' => trans('general.consumables'),
             'component' =>  trans('general.components'),
@@ -242,18 +242,7 @@ class Importer extends Component
             'status' => trans('general.status'),
             'category' => trans('general.category'),
             'asset_notes' => trans('general.item_notes', ['item' => trans('admin/hardware/general.asset')]),
-            /**
-             * Checkout fields:
-             * Assets can be checked out to other assets, people, or locations, but we currently
-             * only support checkout to people and locations in the importer
-             **/
-            'checkout_class' => trans('general.importer.checkout_type'),
-            'first_name' => trans('general.importer.checked_out_to_first_name'),
-            'last_name' => trans('general.importer.checked_out_to_last_name'),
-            'full_name' => trans('general.importer.checked_out_to_fullname'),
-            'email' => trans('general.importer.checked_out_to_email'),
-            'username' => trans('general.importer.checked_out_to_username'),
-            'checkout_location' => trans('general.importer.checkout_location'),
+            'quantity' => trans('general.quantity'),
         ];
 
         $this->consumables_fields = [
