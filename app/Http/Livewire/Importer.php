@@ -239,7 +239,7 @@ class Importer extends Component
             'item_name' => trans('general.item_name_var', ['item' => trans('general.asset')]),
             'asset_tag' => trans('general.asset_tag'),
             'asset_model' => trans('general.model_name'),
-            'asset_type' => trans('general.asset_type'),
+            'category' => trans('general.category'),
             'status' => trans('general.status'),
             'asset_notes' => trans('general.item_notes', ['item' => trans('admin/hardware/general.asset')]),
             'quantity' => trans('general.quantity'),

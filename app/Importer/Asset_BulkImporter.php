@@ -5,6 +5,8 @@ namespace App\Importer;
 class Asset_BulkImporter extends AssetImporter
 {
 
+    protected $itemType = 'asset';
+
     public function __construct($filename)
     {
         \Log::error('Asset_BulkImporter constructor blah');

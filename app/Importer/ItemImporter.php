@@ -280,7 +280,11 @@ class ItemImporter extends Importer
     {
         // Magic to transform "AssetImporter" to "asset" or similar.
         $classname = class_basename(get_class($this));
-        $item_type = strtolower(substr($classname, 0, strpos($classname, 'Importer')));
+        if ($this->itemType) {
+            $item_type = $this->itemType;
+        } else {
+            $item_type = strtolower(substr($classname, 0, strpos($classname, 'Importer')));
+        }
 
         if (empty($asset_category)) {
             $asset_category = 'Unnamed Category';

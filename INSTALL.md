@@ -11,6 +11,13 @@ sudo chmod -R 775 ./public/uploads
 sudo chmod -R 775 ./bootstrap/cache
 ```
 
+Create the database tables and data;
+
+```
+php artisan migrate
+php artisan db:seed --class=GraceFMCategorySeeder
+```
+
 php artisan serve
 
 In .env update
@@ -31,3 +38,5 @@ Run the server
 ```
 php artisan serve
 ```
+
+Make sure to set Asset Tag to auto increment.
