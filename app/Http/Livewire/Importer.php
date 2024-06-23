@@ -41,6 +41,7 @@ class Importer extends Component
     // Make these variables public - we set the properties in the constructor so we can localize them (versus the old static arrays)
     public $accessories_fields;
     public $assets_fields;
+    public $assets_bulk_fields;
     public $users_fields;
     public $licenses_fields;
     public $locations_fields;
@@ -74,6 +75,9 @@ class Importer extends Component
         switch ($type) {
             case 'asset':
                 $results = $this->assets_fields;
+                break;
+            case 'asset_bulk':
+                $results = $this->assets_bulk_fields;
                 break;
             case 'accessory':
                 $results = $this->accessories_fields;
@@ -166,6 +170,7 @@ class Importer extends Component
         $this->progress_bar_class = 'progress-bar-warning';
         $this->importTypes = [
             'asset' =>      trans('general.assets'),
+            'asset_bulk' => trans('general.assets_bulk'),
             'accessory' =>  trans('general.accessories'),
             'consumable' => trans('general.consumables'),
             'component' =>  trans('general.components'),
@@ -228,6 +233,16 @@ class Importer extends Component
             'email' => trans('general.importer.checked_out_to_email'),
             'username' => trans('general.importer.checked_out_to_username'),
             'checkout_location' => trans('general.importer.checkout_location'),
+        ];
+
+        $this->assets_bulk_fields = [
+            'item_name' => trans('general.item_name_var', ['item' => trans('general.asset')]),
+            'asset_tag' => trans('general.asset_tag'),
+            'asset_model' => trans('general.model_name'),
+            'category' => trans('general.category'),
+            'status' => trans('general.status'),
+            'asset_notes' => trans('general.item_notes', ['item' => trans('admin/hardware/general.asset')]),
+            'quantity' => trans('general.quantity'),
         ];
 
         $this->consumables_fields = [

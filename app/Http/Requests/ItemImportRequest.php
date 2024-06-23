@@ -37,6 +37,7 @@ class ItemImportRequest extends FormRequest
 
         $filename = config('app.private_uploads').'/imports/'.$import->file_path;
         $import->import_type = $this->input('import-type');
+        \Log::debug('import type: ' . $import->import_type);
         $class = title_case($import->import_type);
         $classString = "App\\Importer\\{$class}Importer";
         $importer = new $classString($filename);
